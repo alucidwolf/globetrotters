@@ -21,12 +21,16 @@ myApp.config(function ($routeProvider) {
       access: {restricted: false}
     })
     .when('/one', {
-      template: '<h1>This is page one!</h1>',
+      templateUrl: 'partials/destinations.html',
       access: {restricted: true}
     })
     .when('/two', {
-      template: '<h1>This is page two!</h1>',
+      template: '<h1>This is page two, needs to be moved out of javascript like the destinations partial but can be accessed without being logged in!</h1>',
       access: {restricted: false}
+    })
+    .when('/ratings', {
+      templateUrl: 'partials/ratings.html',
+      access: {restricted: true}
     })
     .otherwise({
       redirectTo: '/'
